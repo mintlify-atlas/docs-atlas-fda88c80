@@ -1,0 +1,135 @@
+{
+  "projectType": "framework",
+  "projectName": "IBLGF-AMR",
+  "projectDescription": "A C++ framework for solving incompressible Navier-Stokes equations using lattice Green's functions on adaptively refined meshes",
+  "theme": "aspen",
+  "primaryColor": "#f6be31",
+  "lightColor": "#7c531c",
+  "darkColor": "#040404",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/lgf-method",
+              "concepts/adaptive-mesh-refinement",
+              "concepts/immersed-boundary",
+              "concepts/domain-decomposition"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "guide/building-and-testing",
+              "guide/configuration",
+              "guide/running-simulations",
+              "guide/restart-checkpointing",
+              "guide/docker-usage"
+            ]
+          },
+          {
+            "group": "Solvers",
+            "pages": [
+              "solvers/overview",
+              "solvers/newton-method",
+              "solvers/helmholtz",
+              "solvers/time-spectral",
+              "solvers/linear-systems"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Core Components",
+            "pages": [
+              "api/domain",
+              "api/datafields",
+              "api/operators"
+            ]
+          },
+          {
+            "group": "Lattice Green's Functions",
+            "pages": [
+              "api/lgf/lgf-base",
+              "api/lgf/convolution"
+            ]
+          },
+          {
+            "group": "Solvers",
+            "pages": [
+              "api/solvers/newton",
+              "api/solvers/direct-solver",
+              "api/solvers/stability"
+            ]
+          },
+          {
+            "group": "Utilities",
+            "pages": [
+              "api/utilities/io",
+              "api/utilities/interpolation",
+              "api/utilities/mpi"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Advanced",
+        "groups": [
+          {
+            "group": "Development",
+            "pages": [
+              "advanced/architecture",
+              "advanced/parallelization",
+              "advanced/gpu-support",
+              "advanced/extending"
+            ]
+          },
+          {
+            "group": "Examples",
+            "pages": [
+              "examples/poisson-2d",
+              "examples/oscillating-airfoil",
+              "examples/custom-setup"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Lattice Green's Function method for unbounded domains",
+    "Adaptive Mesh Refinement (AMR) with octree structure",
+    "Immersed Boundary method for complex geometries",
+    "MPI parallelization with domain decomposition",
+    "FFT-based convolution solvers",
+    "Multiple solver types: Newton, Helmholtz, Time-spectral",
+    "HDF5 I/O with Chombo format support",
+    "Optional GPU/CUDA acceleration"
+  ],
+  "publicApiSurface": [
+    "iblgf::domain::Domain<Dim, DataBlock>",
+    "iblgf::lgf::LGF_Base<Dim, Derived>",
+    "iblgf::domain::Operator",
+    "iblgf::solver::NewtonMethod",
+    "iblgf::solver::Helm_stab",
+    "iblgf::solver::TimeSpectralNewton",
+    "iblgf::domain::DataField",
+    "iblgf::domain::BlockDescriptor",
+    "iblgf::domain::Decomposition",
+    "iblgf::ib::IB<Dim, DataBlock>"
+  ]
+}
